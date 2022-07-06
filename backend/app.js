@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 const bodyParser = require('body-parser');
 
-const stuffRoutes = require('./routes/stuff');
+const sauceRoutes = require('./routes/sauce');
 const userRoutes = require('./routes/user');
 
 // Connexion à Mongodb 
@@ -30,7 +30,7 @@ app.use((req, res, next) => {
 
 
 
-app.use('/api/stuff', stuffRoutes);
+app.use('/api/sauce', sauceRoutes);
 app.use('/api/auth', userRoutes);
 
 module.exports = app;
