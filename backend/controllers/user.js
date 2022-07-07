@@ -13,7 +13,7 @@ exports.signup = (req, res, next) => {
                 .then(() => res.status(201).json({message : 'utilisateur créé !'}))
                 .catch(error => res.status(400).json({error}));
         })
-        .catch(error => res.status(500).json({error}));
+        .catch(error => res.status(500).json({message : "erreur d'identification"}));
 };
 
 exports.login = (req, res, next) => {
